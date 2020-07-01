@@ -1,0 +1,472 @@
+$font: "Brandon Grotesque", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+//Color:
+$white: #FFFF;
+$black: #16212F;
+$lightAccent: #7EACBE;
+$darkAccent : #5D91BC;
+$mainBlue: #217FB1;
+$heat:#CB6B6F;
+html, 
+body {
+  
+  font-family: $font;
+  background-color: $white;
+  margin: 0;
+  section {
+    height: 100vh;
+    width: auto;
+  }
+  .header-section{
+    width: auto;
+    height: 10vh;
+  }
+  
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 5fr 3fr 2fr 700px 2fr 3fr 5fr;
+    scroll-behavior: smooth;
+    grid-row-gap:30px;
+    margin:auto;
+    position: relative;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd"
+    "empty empty empty main empty empty empty" 
+    "empty empty empty ft empty empty empty";
+    
+    @media (min-width: 800px) and (max-width: 1100px) {
+      display:grid;
+      grid-template-columns: 5fr 3fr 2fr 800px 2fr 3fr 5fr;
+      scroll-behavior: smooth;
+      margin:auto;
+      position: relative;
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd"
+      "empty empty empty main empty empty empty" 
+      "empty empty empty ft empty empty empty";
+    }
+
+    @media (min-width: 1100px){
+      display:grid;
+      grid-template-columns: 5fr 3fr 2fr 1100px 2fr 3fr 5fr;
+      scroll-behavior: smooth;
+      margin:auto;
+      position: relative;
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd"
+      "empty empty empty main empty empty empty" 
+      "empty empty empty ft empty empty empty";
+    }
+
+}
+
+
+//Header style
+header {
+  width: 80px;
+
+  .inner-header{  
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem auto;
+    left:0;
+    position: fixed;
+    z-index: 9;
+    .logo{
+      width:8rem;
+      margin-left: 1.5rem;
+      a{ font-weight: 700;
+        text-decoration: none;
+        color: $black;
+        letter-spacing: 1.5px; 
+      }  
+    }
+
+    .navigation{    
+      align-items: flex-end;
+      nav{ 
+        a{
+          margin: 0 20px;
+          text-decoration: none;
+          letter-spacing: 1.75px;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size:0.9rem;
+          color:$black; 
+          
+          &:last-child {
+            margin-right:2rem;
+          }
+          
+          &:hover{
+            color:$mainBlue;
+          }
+        }
+       
+      }
+    }
+  }
+}
+
+//banner style
+
+.banner {
+  .row{
+    display: flex;
+    background-color: $white;
+    .main-text {
+      align-items: flex-start;
+      color: $black;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.025rem;
+      text-align:left;
+      width: 100%;
+     
+      p{
+        font-style: italic;
+      }
+      h3{
+        font-weight: 800;
+        font-size:  1.8rem;
+        color: $mainBlue;
+       
+      }
+      h1{
+        font-weight: 800;
+        color: $darkAccent;
+        text-transform: capitalize;
+        font-size: 5rem;
+        
+      }
+      // style button 
+      .button{
+        a {
+          text-decoration: none;
+          color: $black;     
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 1rem;
+          padding:0.7em 1.4em;
+          margin:0 0.3em 0.3em 0;
+          font-weight:400;
+          color:$white;
+          width:20%;
+          background-color:$mainBlue;
+          border-radius: 0.15rem;
+          box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+          &:active{
+            box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12); 
+          }
+        } 
+      }  
+  }
+
+  .main-image{
+        width: 100%;
+        height: auto;
+        margin: 2rem auto;
+        padding-left: 10%;
+        
+      }
+      }
+}
+
+
+// style for about me section
+
+.about{
+
+  display: flex;
+  flex-direction: column;
+  .aboutMe-container {
+    display: flex;
+    justify-content: space-between;
+    .mainText{
+      margin-left: 3rem;
+      color: $black;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      h2{
+        color: $mainBlue;
+      }
+      h3{
+        font-weight: 500;
+        line-height: 1.5rem;
+        font-size: 1rem
+      }
+      p{
+        line-height: 1.25rem;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+      }
+    }
+    .myImage{
+      width: 100%;
+      box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      height: fit-content;
+       img{
+        border-radius: 10px;
+         width: 100%;
+         height: 100%;
+       }
+    }
+  }
+  //styling for skillBox
+  .mySkill{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    padding-top: 1em;
+    transition: all 0.2ms;
+    .skill-container{ 
+      width:30%;
+      height: auto fit-content;
+      border: 0.001em solid $lightAccent;
+      background-color: $white;
+      border-radius: 10px;
+    .inner-skill-box{
+    //style content inside skill box
+      .image{
+        font-size: 2em;
+        color: $mainBlue;
+        line-height: 3em;
+      }
+      .title{
+          h4{
+            font-weight: 700;
+            color: $mainBlue;
+            font-size: 1em;
+          }
+      }
+      .skill{
+        ul{
+          list-style-type: none;
+          font-size: 0.8em;
+          li{
+            color: $black;
+          }
+          .heart{
+            color: $heat;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+
+  }
+}
+
+// style for Work section
+.work{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 10rem;
+  .work-header{
+      h1{
+        color: $mainBlue;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        
+      }
+      p{
+        color: $black;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        font-size:1rem;
+      }
+  } 
+  .work-container{
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: repeat(2,450px);
+    column-gap: 20px;
+    row-gap: 20px;
+    .workbox-inner-container{
+      display: grid;
+      grid-template-rows: 100px 1fr 50px;
+      grid-template-areas: 
+      "hd"
+      "main"
+      "ft";
+      text-align: center;
+      border: 0.07em solid $darkAccent;
+      border-radius: 10px;
+      transition: all 0.3s;
+      &:hover{
+        background-color: $black;
+        .title{
+          color:$mainBlue
+        }
+        .mainText{
+          color: $white;
+        }
+        .button{
+          a{ color:$white;
+            border: 0.16em solid $white;
+          }
+        }
+      }
+      .title{
+        color: $mainBlue;
+        grid-area:hd;
+        padding-top: 10%;
+      }
+      .mainText{
+        grid-area:main;
+        text-align: center;
+        grid-area:main;
+        padding:10px 0 10px 0;
+        font-size: 1rem;
+        letter-spacing: 0.025rem;
+      }
+
+      .button{
+        grid-area:ft;
+        a{
+          text-decoration: none;
+          text-transform: capitalize;
+          border: 0.13em solid  $black;
+          border-radius: 30px;
+          padding:0.3em 1.2em;
+          border-radius:2em;
+          color: $black;
+          font-weight:300;
+          text-align:center;
+          transition: all 0.2s;
+          &:hover{
+            border: 0.16em solid  $mainBlue;
+            color: $mainBlue;
+          }
+         
+      }
+    }
+  }
+  }
+  
+}
+.footer-container{
+  margin-top: 10rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  h1{
+    color:$mainBlue;
+    letter-spacing: 0.025rem;
+  }
+  .button-container {
+    margin-top: 3rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    a{ 
+      transition: all 0.2ms;
+    .button{ 
+     padding:0.5em 0.3em;
+     border: 0.08em solid $black;
+     width:50px;
+     height:50px;
+     border-radius: 50%;
+     font-size :1rem;
+     font-weight: normal;
+     color:$black; 
+     
+      &:hover{
+        border: 0.1em solid $mainBlue;
+        color:$mainBlue
+      }
+      } 
+    }
+  }
+  p{
+    margin-top:3rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: italic;
+
+  }
+}
+
+
+@media all and (max-width:1100px){
+  .work{
+    margin-top: 20rem ;
+    .work-container{
+      grid-template-columns: repeat(2,350px);
+    }
+  }
+}
+
+@media all and (max-width:700px){
+  .banner{
+    .row{
+      display: flex;
+      flex-direction: column-reverse;
+    .main-text {
+        margin-left: 3rem;
+        font-size: 0.5rem;
+        line-height: 1rem;
+        h1{
+          font-size: 3rem;
+        }
+        h3{ 
+          font-size:1.5rem;
+        }
+        p{
+          font-size:1rem;
+        }
+    }
+    .main-image{
+      width: 60%;
+      height: auto;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+  }
+  }
+
+  .about{
+    .aboutMe-container{
+      flex-direction: column;
+      .myImage{
+        width: 50%;
+        height: auto;
+        margin-left: 3rem;
+      }
+
+      .mainText{
+        margin-top:5%;
+        h3 {
+          font-size: 1rem;
+        }
+        p{
+          font-size: 0.8rem;
+        }
+      }
+    
+    }
+    
+  }
+  .work{
+    margin-top: 40rem;
+    .work-container{
+      grid-template-columns: 350px;
+      justify-content: center;
+    }
+  }
+
+}
+
+
