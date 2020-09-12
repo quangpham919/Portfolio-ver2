@@ -1,7 +1,7 @@
 import React from "react"
 import logo from "../images/banner_white.png"
 import Emoji from './common/emoji'
-
+import {Link} from "gatsby"
 
 const Banner = () =>{
 
@@ -13,13 +13,13 @@ return (
               
                 <h1 >Cong Nhat Quang <br></br>Pham </h1>    
                 <br></br>         
-                <h3> <Emoji symbol="🚀"  label="rocket"/> Junior Full Stack Developer</h3>
+                <h3> <Emoji symbol="🚀"  label="rocket"/> Junior Software Developer</h3>
                 <br></br>
                 <p>I build elegant, responsive and user-friendly websites </p>
                 <br></br>
                 
                 <div className="button">
-                      <a href="mailto:quangpham9199@gmail.com" >  Get in touch </a>
+                      <Link to="contact" >  Get in touch </Link>
                 </div>  
 
             </div>
@@ -35,3 +35,4 @@ return (
 }
 
 export default Banner;
+ 

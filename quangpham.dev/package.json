@@ -31,6 +31,7 @@
     "smooth-scrollbar": "^8.5.2"
   },
   "devDependencies": {
+    "gatsby-plugin-anchor-links": "^1.1.1",
     "prettier": "2.0.5"
   },
   "keywords": [

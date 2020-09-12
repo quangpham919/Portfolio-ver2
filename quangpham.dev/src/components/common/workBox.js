@@ -10,7 +10,8 @@ const WorkBox = ({props}) =>{
     chatApp : faSms,
     restaskest : faUtensils,
     housePriceAnalyst: faChartBar,
-    gameParadise: faGamepad
+    gameParadise: faGamepad,
+    chatAPI: faSms
 
   }
     return (
@@ -20,10 +21,20 @@ const WorkBox = ({props}) =>{
             <h3> <FontAwesomeIcon icon={iconSub[props.icon]} />  {props.title} </h3>
           </div>
           <div className="mainText"> <p> {props.description} </p></div>
-          <div className="button">
-            <a href={props.github} rel="noopener noreferrer"> View more  </a> 
-            { props.url ? <Link to={props.url}> <FontAwesomeIcon icon={faLink} /> </Link>  : ""} 
+
+          <div className="buttonGroup">
+          <div className="button button-visit">
+            { props.url ? <a href={props.url} rel="noopener noreferrer"> Visit Page  </a> : null } 
           </div>
+
+          
+          <div className="button button-github">
+            { props.github ? <a href={props.url} rel="noopener noreferrer"> github  </a> : null } 
+          </div>
+          
+          </div> 
+          
+          
       </div>
     )
 };
